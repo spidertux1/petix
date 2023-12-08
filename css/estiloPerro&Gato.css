@@ -1,0 +1,23 @@
+.articulo img {
+    border: 2px solid var(--color-naranja);
+    /* Otros estilos */
+}
+
+.contenedor-articulos {
+    display: flex; /* Utilizar Flexbox para el contenedor de los artículos */
+    flex-wrap: wrap; /* Envolver los elementos a una nueva fila si no caben */
+    justify-content: flex-start; /* Alinear al inicio del contenedor */
+    flex: 0 0 auto; /* Permitir que los artículos no se ajusten y mantengan su tamaño original */
+    margin: 10px; /* Añadir márgenes entre los artículos */
+}
+.articulo {
+    max-width: 200px; /* Ajusta el ancho según tu diseño */
+    border: 1px solid #ccc; /* Bordes para visualización */
+    padding: 10px; /* Añade relleno para separar elementos */
+    margin: 10px; /* Añade márgenes para separar los artículos */
+    
+}
+
+.descripcion {
+    font-size: 12px; /* Tamaño de fuente para la descripción */
+}

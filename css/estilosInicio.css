@@ -1,0 +1,159 @@
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+        color: white;
+    }
+
+    50% {
+        transform: scale(1.1);
+        color: #FFA500;
+    }
+
+    100% {
+        transform: scale(1);
+        color: #FFA500;
+    }
+}
+
+body {
+    font-family: 'Hind Madurai', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.parrafo {
+    font-size: larger;
+}
+
+.logo {
+    max-width: 140px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.icons {
+    font-family: 'Material Symbols Outlined';
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+/*
+.navbar {
+    background-color: #81C9FA;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    animation: zoom 0.5s;
+}
+
+.dropdown:hover .subcategories {
+    display: block;
+}
+
+.subcategories {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #81C9FA;
+    min-width: 200px;
+    text-align: left;
+    padding: 10px;
+}
+*/
+.dropdown {
+    position: relative;
+}
+
+.container {
+    margin: 20px;
+    text-align: center;
+    flex: 1;
+    position: relative; /*agregado*/
+}
+
+.buttons-container {
+    margin-top: 50px;
+}
+
+.left-align {
+    margin: 10px;
+    text-align: left;
+}
+
+.right-align {
+    margin: 10px;
+    text-align: right;
+}
+
+.imagen-carrusel {
+    height: 600px;
+    opacity: 0.5;    
+}
+
+.footer {
+    background-color: #81C9FA;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pet-buttons {
+    position: relative;
+}
+
+.pet-buttons img {
+    max-width: 150px;
+    height: auto;
+    margin: 10px;
+    position: relative;
+    /* Asegura que el pseudoelemento se posicione correctamente detrás de las imágenes */
+}
+
+/* Pseudoelemento para crear el fondo naranja detrás de las imágenes */
+.pet-buttons::before {
+    content: '';
+    /* Necesario para que el pseudoelemento se renderice */
+    background-color: #FFA500;
+    /* Color naranja */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* Coloca el pseudoelemento detrás de las imágenes */
+}
+#lista-carrito {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .list-group-item {
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f8f9fa;
+  }
+  

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Petix</title>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="css/estilosInicio.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap"
+            rel="stylesheet">
+
+        <!-- Enlace al archivo CSS de Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+        <!-- Los scripts de Bootstrap generalmente requieren jQuery y Popper.js, inclúyelos también -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="Inicio.html">
+                    <img src="resource/LogoPetix.png" alt="Logo de la Tienda"
+                        class="logo">
+                </a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Inicio.html">
+                                <span class="material-symbols-outlined icons">home</span>
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"
+                                id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span class="material-symbols-outlined icons">pets</span>
+                                Mascotas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="dropdown-item">
+                                    <a href="CatalogoPerros.html">Perros</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="CatalogoGatos.html">Gatos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="CatalogoGeneral.html">
+                                <span class="material-symbols-outlined icons">percent</span>
+                                Catalogo
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="AtencionCliente.html">
+                                <span class="material-symbols-outlined icons">support_agent</span>
+                                Atención al cliente
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Sobre_nosotros.html">
+                                <span class="material-symbols-outlined icons">groups</span>
+                                Sobre nosotros
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="material-symbols-outlined icons">shopping_cart</span>
+                                Carrito
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Menú desplegable del carrito -->
+        <div class="menu-carrito" id="carrito">
+            <ul id="listaCarrito">
+                <!-- Productos agregados aquí -->
+            </ul>
+            <!-- Mensaje de carrito vacío DENTRO del contenedor del carrito -->
+            <div id="mensajeCarritoVacio" class="mensaje-carrito-vacio">El carrito está vacío</div>
+            <div id="totalCarrito" class="total-carrito">Total: $0</div>
+            <button id="botonPagar" class="button pagar">Pagar</button>
+        </div>
+        <span class="material-icons carrito-icono" onclick="toggleCarrito()">shopping_cart</span>
+      <span id="contadorCarrito">0</span>
+    
+
+      <script src="js/main.js"></script>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h2>Producto de perro.</h2>
+
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="resource/CatalogoPerros/prod1.jpg"
+                                class="card-img-top" alt="Woow Esencial" style="max-height: 290px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Woow Esencial</h5>
+                                
+                                <p class="card-text">
+                                    <b>$8,990.00</b>
+                                </p>
+                                <a class="btn btn-primary" onclick="agregarAlCarrito('Woow Esencial', 8990);">Añadir al carrito</a>
+                                    <!-- Actualizado el enlace de "Ver detalles" -->
+                            <a href="DetallesProducto1.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="resource/CatalogoPerros/prod2.jpg"
+                                class="card-img-top" alt="Purina Pro Plan Dry" style="max-height: 290px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Purina Pro Plan Dry</h5>
+                                
+                                <p class="card-text">
+                                    <b>$7,999.00</b>
+                                </p>
+                                <a class="btn btn-primary" onclick="agregarAlCarrito('Purina Pro Plan Dry', 7999);">Añadir al carrito</a>
+                                    <a href="DetallesProducto2.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="resource/CatalogoPerros/prod3.jpg"
+                                class="card-img-top" alt="HI MULTI PRO" style="max-height: 290px;">
+                            <div class="card-body">
+                                <h5 class="card-title">HI MULTI PRO</h5>
+                               
+                                <p class="card-text">
+                                    <b>$8,790.00</b>
+                                </p>
+                                <a class="btn btn-primary" onclick="agregarAlCarrito('HI MULTI PRO', 8790);">Añadir al carrito</a>
+                                    <a href="DetallesProducto3.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        <h2>Producto de Gato.</h2>
+
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="resource/CatalogoGatos/prod1.jpg"
+                                class="card-img-top" alt="Minino Plus Multietapa" style="max-height: 290px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Minino Plus Multietapa</h5>
+                                
+                                <p class="card-text">
+                                    <b>$585.89</b>
+                                </p>
+                                <a class="btn btn-primary" onclick="agregarAlCarrito('Minino Plus Multietapa', 585.89);">Añadir al carrito</a>
+                                    <!-- Actualizado el enlace de "Ver detalles" -->
+                            <a href="DetallesProductoG1.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="resource/CatalogoGatos/prod2.jpg"
+                                class="card-img-top" alt="Whiskas Comida para Gatos Croquetas" style="max-height: 290px;">
+                            <div class="card-body">
+                                <h5 class="card-title">producto 2</h5>
+                                
+                                <p class="card-text">
+                                    <b>$188</b>
+                                </p>
+                                <a class="btn btn-primary" onclick="agregarAlCarrito('Whiskas Comida para Gatos Croquetas', 188);">Añadir al carrito</a>
+                                    <a href="DetallesProductoG2.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="resource/CatalogoGatos/prod3.jpg"
+                                class="card-img-top" alt="EVAXO - Kirkland Signature Expect More Alimento para gatos de pollo y arroz" style="max-height: 290px;">
+                            <div class="card-body">
+                                <h5 class="card-title">EVAXO - Kirkland Signature Expect More Alimento para gatos de pollo y arroz</h5>
+                               
+                                <p class="card-text">
+                                    <b>$769</b>
+                                </p>
+                                <a class="btn btn-primary" onclick="agregarAlCarrito('EVAXO - Kirkland Signature Expect More Alimento para gatos de pollo y arroz', 769);">Añadir al carrito</a>
+                                    <a href="DetallesProductoG3.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+
+            <div>
+                <footer class="footer d-flex justify-content-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 flex-grow-1">
+                                <ul class="list-inline mb-0 justify-content-center">
+                                    <li class="list-inline-item">
+                                        <a href="https://www.facebook.com/groups/616938080476468">
+                                            <i class="bi bi-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="https://chat.whatsapp.com/ELdZ46kcez854ir1AIKVZ8">
+                                            <i class="bi bi-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                            <p class="text-center text-muted">
+                                Dirección:
+                                Av. Adolfo López Mateos #1801 Ote
+                                <br>
+                                Fracc. Bona Gens, C.P. 20256
+                                <br>
+                                Aguascalientes, Ags., México.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script>
+            window.ga = function () {
+              ga.q.push(arguments);
+            };
+            ga.q = [];
+            ga.l = +new Date();
+            ga("create", "UA-XXXXX-Y", "auto");
+            ga("send", "pageview");
+          </script>
+          <script
+            src="https://www.google-analytics.com/analytics.js"
+            async
+            defer
+          ></script>
+
+    </body>
+
+</html>

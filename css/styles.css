@@ -1,0 +1,172 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: orange;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: blue;
+}
+
+p {
+    margin-top: 16px;
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+/* Estilos para el icono del carrito y el menú desplegable */
+.carrito-icono {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 999; /* Asegura que el icono esté sobre otros elementos */
+    color: black; /* Color del icono */
+    font-size: 36px; /* Tamaño más grande del icono */
+  }
+  
+  .menu-carrito {
+    display: none;
+    position: fixed;
+    right: 10px;
+    top: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: #ffffff; /* Fondo semitransparente oscuro */
+    color: #333; /* Texto en blanco para contraste */
+    font-size: 0.9em;
+    z-index: 1000;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que todo quede dentro de los bordes redondeados */
+  }
+  
+  .menu-carrito ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-carrito ul li {
+    padding: 10px;
+    border-bottom: 1px solid #555;
+    transition: background-color 0.3s; /* Transición para el efecto al pasar el mouse */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-carrito ul li:last-child {
+    border-bottom: none; /* Elimina la línea del último elemento */
+  }
+  
+  .menu-carrito ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto al pasar el mouse */
+  }
+  
+  .menu-carrito .total-carrito {
+    font-weight: bold; /* Texto en negrita para el total */
+    text-align: right; /* Alineación a la derecha del total */
+    padding-top: 10px; /* Espacio por encima del total */
+  }
+  
+  .menu-carrito .material-icons:hover {
+    color: #ff0000; /* Cambia el color al pasar el mouse para indicar acción */
+  }
+  
+  .menu-carrito ul li button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .menu-carrito ul li button:hover {
+    text-decoration: underline; /* Efecto al pasar el mouse sobre el botón */
+  }
+  
+  /* Estilos para el contador de artículos en el carrito */
+  #contadorCarrito {
+    display: inline-block;
+    background-color: #ff4500; /* Un color que combine con tu diseño */
+    color: white;
+    padding: 0.3em 0.6em; /* Espaciado interno para dar forma al círculo */
+    font-family: 'Roboto', sans-serif; /* Asegúrate de usar la misma familia de fuentes que el resto de tu página */
+    font-size: 1em; /* Ajusta esto para que el tamaño del texto coincida con tu diseño */
+    font-weight: bold;
+    line-height: 1; /* Esto ayuda a mantener la forma del círculo */
+    border-radius: 50%; /* Redondea las esquinas para formar un círculo */
+    position: fixed; /* Posición absoluta con respecto al ícono del carrito */
+    top: 5px; /* Ajusta estos valores según sea necesario */
+    right: 50px;
+    z-index: 1001; /* Asegúrate de que el contador esté por encima del ícono del carrito */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra suave para resaltar el contador */
+    border: 2px solid white; /* Borde blanco para hacerlo resaltar sobre cualquier fondo */
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .mensaje-carrito-vacio {
+    color: #fff; /* Texto en blanco para contraste */
+    background-color: rgba(33, 33, 33, 0.9); /* Fondo oscuro semitransparente para mantener la coherencia con el menú del carrito */
+    text-align: center; /* Centrar el texto horizontalmente */
+    padding: 20px; /* Espacio alrededor del texto */
+    margin: 10px 20px; /* Margen alrededor del mensaje dentro del carrito */
+    font-size: 1.2em; /* Tamaño de fuente moderado para legibilidad */
+    border-radius: 5px; /* Bordes redondeados suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+    border: 1px solid #fff; /* Borde sutil para definir el elemento */
+    display: block; 
+    position: relative; /* Posicionamiento relativo para ajustarse dentro del carrito */
+    z-index: 10; /* Asegura que el mensaje esté por encima de otros elementos, si es necesario */
+  }
